@@ -140,7 +140,7 @@ import perfil from "../assets/imgPerfil.jpg";
     padding: 0 1rem;
     text-align: left;
   }
-  .titulo {
+  .title {
     font-size: 24px;
   }
   .quote {

@@ -299,7 +299,7 @@ button:hover {
   }
 
   .titulo {
-    font-size: 2rem;
+    font-size: 24px;
   }
 
   .form-container {

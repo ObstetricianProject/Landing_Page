@@ -7,7 +7,7 @@ const menuAbierto = ref(false)
 
 const toggleMenu = () => {
   menuAbierto.value = !menuAbierto.value
-}
+} 
 
 const cerrarMenu = () => {
   menuAbierto.value = false

@@ -1,0 +1,57 @@
+{
+  "nav-links": {
+    "inicio": "Inicio",
+    "nosotros": "Nosotros",
+    "servicios": "Servicios",
+    "atenciones": "Atenciones",
+    "contacto": "Contáctenos"
+  },
+  "footer": {
+    "copyright": "© 2025, DelSalud. Todos los derechos reservados."
+  },
+  "main": {
+    "title": "Consultorio Obstétrico",
+    "subtitle": "Atenciones y consejería en salud sexual y reproductiva.",
+    "button": "Solicitar Cita"
+  },
+  "us": {
+    "title": "Nosotros",
+    "paragraph1": "Lic. Obstetra Delsi Nataly Almerco Rojas",
+    "paragraph2": "Egresada de la Universidad Nacional Mayor de San Marcos (UNMSM)<br>Especialista en Alto Riesgo Obstétrico y Emergencias Obstétricas<br>Diplomado en Salud Sexual y Reproductiva"
+  },
+  "us1": {
+    "subtitle1": "“Porque tu salud, tu cuerpo y tus decisiones merecen ser escuchadas y cuidadas con respeto”",
+    "paragraph": "Somos DelSalud, un espacio seguro para todas las personas. Brindamos atención en salud sexual y reproductiva con un enfoque humano, científico y libre de prejuicios, porque creemos firmemente que tu cuerpo y tus decisiones merecen respeto."
+  },
+  "services": {
+    "title": "Servicios",
+    "items": [
+      "Controles prenatales",
+      "Psicoprofilaxis obstétrica",
+      "Pruebas de embarazo",
+      "Tamizajes de VIH, sífilis y hepatitis",
+      "Toma de Papanicolaou",
+      "Examen de mamas",
+      "Planificación familiar",
+      "Consejería en salud sexual y reproductiva"
+    ]
+  },
+  "atenciones": {
+    "titulo": "Atenciones",
+    "serviciosTitulo": "Servicios y Modalidades",
+    "servicios": "Presencial y virtual, Videollamadas, Mensajes",
+    "direccionTitulo": "Dirección",
+    "direccion": "Jr. Los Rubíes 847 - El Tambo, Huancayo",
+    "whatsappTitulo": "WhatsApp",
+    "whatsapp": "940 514 005 / 967 310 317"
+  },
+  "contacto": {
+    "titulo": "Contáctenos",
+    "subtitulo": "Solicita información",
+    "nombre": "Nombres y apellidos",
+    "email": "Email",
+    "telefono": "Teléfono",
+    "consulta": "Consulta",
+    "boton": "Enviar"
+  }
+}

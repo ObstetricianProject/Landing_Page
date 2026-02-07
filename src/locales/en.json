@@ -1,0 +1,57 @@
+{
+  "nav-links": {
+    "inicio": "Home",
+    "nosotros": "About Us",
+    "servicios": "Services",
+    "atenciones": "CareInfo",
+    "contacto": "Contact Us"
+  },
+  "footer": {
+    "copyright": "© 2025, DelSalud. All rights reserved."
+  },
+  "main": {
+    "title": "Obstetric Office",
+    "subtitle": "Care and counseling in sexual and reproductive health.",
+    "button": "Book Appointment"
+  },
+  "us": {
+    "title": "About us",
+    "paragraph1": "Lic. Midwife Delsi Nataly Almerco Rojas",
+    "paragraph2": "Graduate of the National University of San Marcos (UNMSM)<br>Specialist in High-Risk Obstetrics and Obstetric Emergencies<br>Diploma in Sexual and Reproductive Health"
+  },
+  "us1": {
+    "subtitle1": "“Because your health, your body, and your decisions deserve to be heard and respected”",
+    "paragraph": "We are DelSalud, a safe space for everyone. We provide care in sexual and reproductive health with a human, scientific, and non-judgmental approach, because we firmly believe that your body and your decisions deserve respect."
+  },
+  "services": {
+    "title": "Services",
+    "items": [
+      "Prenatal checkups",
+      "Obstetric psychoprophylaxis",
+      "Pregnancy tests",
+      "Screenings for HIV, syphilis, and hepatitis",
+      "Pap smear",
+      "Breast exam",
+      "Family planning",
+      "Counseling in sexual and reproductive health"
+    ]
+  },
+  "atenciones": {
+    "titulo": "Appointments",
+    "serviciosTitulo": "Services and Modalities",
+    "servicios": "In-person and virtual, Video calls, Messages",
+    "direccionTitulo": "Address",
+    "direccion": "Jr. Los Rubíes 847 - El Tambo, Huancayo",
+    "whatsappTitulo": "WhatsApp",
+    "whatsapp": "940 514 005 / 967 310 317"
+  },
+  "contacto": {
+    "titulo": "Contact Us",
+    "subtitulo": "Request Information",
+    "nombre": "Full Name",
+    "email": "Email",
+    "telefono": "Phone",
+    "consulta": "Inquiry",
+    "boton": "Send"
+  }
+}

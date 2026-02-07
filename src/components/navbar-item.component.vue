@@ -7,7 +7,7 @@ const menuAbierto = ref(false)
 
 const toggleMenu = () => {
   menuAbierto.value = !menuAbierto.value
-} 
+}
 
 const cerrarMenu = () => {
   menuAbierto.value = false
@@ -17,17 +17,20 @@ const cerrarMenu = () => {
 <template>
   <nav class="navbar">
     <div class="navbar-content">
-      <!-- Logo -->
       <div class="logo">
         <img :src="logo" alt="DelSalud logo" />
       </div>
 
-      <!-- Botón hamburguesa (solo móvil) -->
-      <button class="menu-btn" @click="toggleMenu" aria-label="Abrir menú">
-        ☰
-      </button>
+      <div class="mobile-actions">
+        <a href="/login" class="login-btn login-mobile-top" @click="cerrarMenu">
+          Iniciar sesión
+        </a>
 
-      <!-- Menú -->
+        <button class="menu-btn" @click="toggleMenu" aria-label="Abrir menú">
+          ☰
+        </button>
+      </div>
+
       <ul class="nav-links" :class="{ open: menuAbierto }">
         <li><a href="#inicio" @click="cerrarMenu">{{ $t('nav-links.inicio') }}</a></li>
         <li><a href="#nosotros" @click="cerrarMenu">{{ $t('nav-links.nosotros') }}</a></li>
@@ -35,25 +38,15 @@ const cerrarMenu = () => {
         <li><a href="#atenciones" @click="cerrarMenu">{{ $t('nav-links.atenciones') }}</a></li>
         <li><a href="#contacto" @click="cerrarMenu">{{ $t('nav-links.contacto') }}</a></li>
 
-        <!-- Idioma (MÓVIL) -->
         <li class="lang-mobile">
           <LanguageSwitcher />
         </li>
-
-        <!-- Login (MÓVIL) -->
-        <li class="login-mobile">
-          <a href="/login" class="login-btn" @click="cerrarMenu">
-            Iniciar sesión
-          </a>
-        </li>
       </ul>
 
-      <!-- Idioma (DESKTOP) -->
       <div class="lang-switcher">
         <LanguageSwitcher />
       </div>
 
-      <!-- Login (DESKTOP) -->
       <a href="/login" class="login-btn login-desktop">
         Iniciar sesión
       </a>
@@ -124,7 +117,10 @@ const cerrarMenu = () => {
   cursor: pointer;
 }
 
-.login-mobile,
+.mobile-actions {
+  display: none;
+}
+
 .lang-mobile {
   display: none;
 }
@@ -139,14 +135,26 @@ const cerrarMenu = () => {
     height: 52px;
   }
 
-  .menu-btn {
-    display: block;
-    margin-left: auto;
-  }
-
   .lang-switcher,
   .login-desktop {
     display: none;
+  }
+
+  .mobile-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-left: auto;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .login-mobile-top {
+    font-size: 14px;
+    padding: 0.45rem 0.9rem;
+    border-radius: 8px;
   }
 
   .nav-links {
@@ -171,22 +179,9 @@ const cerrarMenu = () => {
     display: block;
   }
 
-  .lang-mobile,
-  .login-mobile {
+  .lang-mobile {
     display: block;
     margin-top: 0.4rem;
   }
-
-  .login-btn {
-    width: 100%;
-    max-width: 280px;
-    margin: 0.5rem auto 0;
-    text-align: center;
-    font-size: 16px;
-    padding: 0.75rem;
-    display: block;
-  }
 }
-
-
 </style>

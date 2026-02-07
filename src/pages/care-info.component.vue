@@ -122,7 +122,7 @@ import whatsapp from "../assets/imgWhatsapp.png"
 
 @media (max-width: 600px) {
   .titulo {
-    font-size: 36px;
+    font-size: 24px;
   }
 
   .item {

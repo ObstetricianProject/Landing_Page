@@ -114,7 +114,7 @@ const servicios = [
   }
 
   .titulo {
-    font-size: 36px;
+    font-size: 24px;
   }
 
   .card-servicio img {

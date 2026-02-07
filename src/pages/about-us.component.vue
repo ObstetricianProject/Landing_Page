@@ -29,7 +29,7 @@ import perfil from "../assets/imgPerfil.jpg";
 .about-us {
   width: 100%;
   background-color: white;
-  padding: 8rem 0 11rem;  /* igual que Atenciones, más “pantalla grande” */
+  padding: 8rem 0 11rem;
   font-family: 'Palanquin', sans-serif;
   display: flex;
   justify-content: center;
@@ -39,7 +39,7 @@ import perfil from "../assets/imgPerfil.jpg";
 .info {
   font-size: 24px;
   line-height: 1.6;
-  text-align: left;      /* 👈 CLAVE */
+  text-align: left;
   max-width: 540px;
   margin: 0 auto;
 }
@@ -140,7 +140,9 @@ import perfil from "../assets/imgPerfil.jpg";
     padding: 0 1rem;
     text-align: left;
   }
-
+  .titulo {
+    font-size: 24px;
+  }
   .quote {
     font-size: 24px;
     text-align: left;

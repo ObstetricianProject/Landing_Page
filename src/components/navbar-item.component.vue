@@ -17,6 +17,7 @@ const cerrarMenu = () => {
 <template>
   <nav class="navbar">
     <div class="navbar-content">
+      <!-- Logo -->
       <div class="logo">
         <img :src="logo" alt="DelSalud logo" />
       </div>
@@ -26,7 +27,7 @@ const cerrarMenu = () => {
         ☰
       </button>
 
-      <!-- Links (en móvil se ocultan y se muestran al abrir) -->
+      <!-- Menú -->
       <ul class="nav-links" :class="{ open: menuAbierto }">
         <li><a href="#inicio" @click="cerrarMenu">{{ $t('nav-links.inicio') }}</a></li>
         <li><a href="#nosotros" @click="cerrarMenu">{{ $t('nav-links.nosotros') }}</a></li>
@@ -34,16 +35,28 @@ const cerrarMenu = () => {
         <li><a href="#atenciones" @click="cerrarMenu">{{ $t('nav-links.atenciones') }}</a></li>
         <li><a href="#contacto" @click="cerrarMenu">{{ $t('nav-links.contacto') }}</a></li>
 
-        <!-- Idioma dentro del menú (solo móvil) -->
+        <!-- Idioma (MÓVIL) -->
         <li class="lang-mobile">
           <LanguageSwitcher />
         </li>
+
+        <!-- Login (MÓVIL) -->
+        <li class="login-mobile">
+          <a href="/login" class="login-btn" @click="cerrarMenu">
+            Iniciar sesión
+          </a>
+        </li>
       </ul>
 
-      <!-- Idioma normal (solo desktop) -->
+      <!-- Idioma (DESKTOP) -->
       <div class="lang-switcher">
         <LanguageSwitcher />
       </div>
+
+      <!-- Login (DESKTOP) -->
+      <a href="/login" class="login-btn login-desktop">
+        Iniciar sesión
+      </a>
     </div>
   </nav>
 </template>
@@ -52,13 +65,11 @@ const cerrarMenu = () => {
 .navbar {
   background-color: #CF1E76;
   font-family: 'Palanquin', sans-serif;
-  font-size: 24px;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-content {
@@ -66,7 +77,7 @@ const cerrarMenu = () => {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 1rem;
   padding: 0.5rem 1.5rem;
 }
 
@@ -78,111 +89,104 @@ const cerrarMenu = () => {
   list-style: none;
   display: flex;
   gap: 2rem;
+  margin: 0 auto;
   padding: 0;
-  margin: 0;
-  justify-content: center;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
   font-weight: 600;
-  position: relative;
 }
 
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background-color: #ffe6f1;
-  transition: width 0.3s ease;
+.login-btn {
+  background-color: #7B0038;
+  color: white;
+  padding: 0.6rem 1.4rem;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  white-space: nowrap;
 }
 
-.nav-links a:hover {
-  color: #ffe6f1;
+.login-btn:hover {
+  background-color: #5e002a;
 }
 
-.nav-links a:hover::after {
-  width: 100%;
-}
-
-.lang-switcher {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  min-width: 100px;
-}
-
-/* Botón hamburguesa (oculto en desktop) */
 .menu-btn {
   display: none;
-  background: transparent;
+  background: none;
   border: none;
-  color: white;
   font-size: 34px;
-  font-weight: 700;
+  color: white;
   cursor: pointer;
 }
 
-/* Idioma dentro del menú (solo móvil) */
+.login-mobile,
 .lang-mobile {
   display: none;
 }
 
-/* ---- MÓVIL ---- */
 @media (max-width: 768px) {
   .navbar-content {
     flex-wrap: wrap;
+    align-items: center;
   }
 
   .logo img {
-    height: 56px;
+    height: 52px;
   }
 
   .menu-btn {
-    display: block; /* aparece el ☰ */
+    display: block;
+    margin-left: auto;
   }
 
-  /* Oculta links por defecto en móvil */
+  .lang-switcher,
+  .login-desktop {
+    display: none;
+  }
+
   .nav-links {
     display: none;
     width: 100%;
     flex-direction: column;
-    gap: 0.8rem;
-    padding: 1rem 0;
+    gap: 0.6rem;
+    margin: 0.8rem 0 0;
+    padding: 1rem;
+    background-color: #CF1E76;
+    border-radius: 14px;
   }
 
-  /* Muestra links cuando menuAbierto=true */
   .nav-links.open {
     display: flex;
   }
 
-  /* Oculta el switch de idioma “normal” en móvil */
-  .lang-switcher {
-    display: none;
-  }
-
-  /* Muestra el idioma dentro del menú */
-  .lang-mobile {
-    display: block;
-    padding-top: 0.5rem;
-  }
-
   .nav-links a {
     font-size: 18px;
+    padding: 0.6rem 0.8rem;
+    border-radius: 10px;
+    display: block;
   }
-}
 
-@media (max-width: 480px) {
-  .navbar {
+  .lang-mobile,
+  .login-mobile {
+    display: block;
+    margin-top: 0.4rem;
+  }
+
+  .login-btn {
+    width: 100%;
+    max-width: 280px;
+    margin: 0.5rem auto 0;
+    text-align: center;
     font-size: 16px;
-  }
-
-  .navbar-content {
-    padding: 0.5rem 1rem;
+    padding: 0.75rem;
+    display: block;
   }
 }
+
+
 </style>
